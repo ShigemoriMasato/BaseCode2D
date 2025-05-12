@@ -35,6 +35,15 @@
     <Filter Include="Source\Common">
       <UniqueIdentifier>{15c0a3ed-bfb4-48b0-8166-0337475faca1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Scene\Play">
+      <UniqueIdentifier>{22c09617-940f-456c-9c23-1c712e04d3ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\GameOver">
+      <UniqueIdentifier>{a4656a32-1e39-4b87-93db-5e24d2907db7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\GameClear">
+      <UniqueIdentifier>{8efe5bd7-e2df-4ebc-afd1-6578d4e3d3a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp">
@@ -69,6 +78,18 @@
     </ClCompile>
     <ClCompile Include="Vector.cpp">
       <Filter>Source\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Play.cpp">
+      <Filter>Source\Scene\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>Source\Scene\GameOver</Filter>
+    </ClCompile>
+    <ClCompile Include="GameClear.cpp">
+      <Filter>Source\Scene\GameClear</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +200,16 @@
     </ClInclude>
     <ClInclude Include="Vector.h">
       <Filter>Source\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Play.h">
+      <Filter>Source\Scene\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>Source\Scene\GameOver</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClear.h">
+      <Filter>Source\Scene\GameClear</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
