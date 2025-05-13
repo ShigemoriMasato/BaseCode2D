@@ -16,6 +16,17 @@ Object::Object(const Vector2& size, FillMode fillMode, ObjectType type, const st
 	Initialize(size, fillMode, type, localPositions);
 }
 
+void Object::SetTextureHandle(int textureHandle, IVector2 textureSize)
+{
+    textureHandle_ = textureHandle;
+    textureSize_ = textureSize;
+}
+
+void Object::SetTexturePos(IVector2 texturePos)
+{
+    texturePos_ = texturePos;
+}
+
 void Object::Ready(const Camera& camera, int bright) {
 
 	MakeAffineMatrix(camera);
@@ -51,6 +62,17 @@ void Object::Draw() const {
         Novice::DrawLine(static_cast<int>(spos_[0].x), static_cast<int>(spos_[0].y),
             static_cast<int>(spos_[1].x), static_cast<int>(spos_[1].y),
             sColor_);
+
+        break;
+
+    case ObjectType::kQuad:
+
+        Novice::DrawQuad(static_cast<int>(spos_[1].x), static_cast<int>(spos_[1].y),
+            static_cast<int>(spos_[0].x), static_cast<int>(spos_[0].y),
+            static_cast<int>(spos_[2].x), static_cast<int>(spos_[2].y),
+            static_cast<int>(spos_[3].x), static_cast<int>(spos_[3].y),
+            textureSize_.x * texturePos_.x, textureSize_.y * texturePos_.y,
+            textureSize_.x, textureSize_.y, textureHandle_, sColor_);
 
         break;
 

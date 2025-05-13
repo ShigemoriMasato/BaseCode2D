@@ -1,7 +1,7 @@
 #include <Novice.h>
 #include "SceneManager.h"
 
-const char kWindowTitle[] = "LC1A_10_シゲモリ_マサト_タイトル";
+const char kWindowTitle[] = "";
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
@@ -11,6 +11,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	SceneManager* sceneManager = new SceneManager();
 
+
+
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
 		// フレームの開始
@@ -19,6 +21,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓更新処理ここから
 		///
+
 
 		sceneManager->ChangeScene();
 

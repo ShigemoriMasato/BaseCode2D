@@ -29,20 +29,33 @@ public:
     Object(const Vector2& size, FillMode fillMode = kFillModeSolid, ObjectType type = ObjectType::kQuad, const std::vector<Vector2>& localPositions = {});
     virtual ~Object() = default;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="textureHandle"></param>
+    /// <param name="textureSize">画像サイズ</param>
+    void SetTextureHandle(int textureHandle, IVector2 textureSize);
+    void SetTexturePos(IVector2 texturePos);
+
     void Ready(const Camera& camera, int bright = 255);
 
     virtual void Draw() const;
 
-private:
-    void Initialize(const Vector2& size, FillMode fillMode, ObjectType type, const std::vector<Vector2>& localPositions);
-
+protected:
     std::vector<Vector2> npos_;         // 正規化されたローカル座標
     std::vector<Vector2> spos_;         // 変換されたスクリーン座標
     Vector2 smidPos_;                   // スクリーン上の中心位置
+
+    IVector2 textureSize_;
+    IVector2 texturePos_;
+    int textureHandle_ = 0;
 
 	ObjectType type_;                   // オブジェクトの形状
 	FillMode fillMode_;                 // 塗りつぶしの有無
 	BlendMode blendMode_;               // ブレンドモード
 
     unsigned int sColor_;               //スクリーンに描画する用の色
+
+private:
+    void Initialize(const Vector2& size, FillMode fillMode, ObjectType type, const std::vector<Vector2>& localPositions);
 };
