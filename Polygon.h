@@ -27,7 +27,9 @@ public:
 	/// <param name="pos">spos_</param>
 	Vector2 ApplyPosition(const Vector2& pos);
 
-	void SetPosition(Vector2 pos);
+	void SetPosition(Vector2& pos);
+
+	Vector2 GetPosition() const;
 
 protected:
 

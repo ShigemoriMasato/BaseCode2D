@@ -38,7 +38,10 @@ void Polygon::MakeAffineMatrix(const Camera& camera) {
 Vector2 Polygon::ApplyPosition(const Vector2& pos) {
 	return pos * matrix_;
 }
-void Polygon::SetPosition(Vector2 pos)
+void Polygon::SetPosition(Vector2& pos)
 {
 	position_ = pos;
-};
+}
+Vector2 Polygon::GetPosition() const {
+	return position_;
+}
