@@ -6,3 +6,4 @@ Scene::Scene(CommonData* cd) {
 
 Scene::~Scene() {
 }
+

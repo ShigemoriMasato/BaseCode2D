@@ -27,11 +27,13 @@ public:
 	/// <param name="pos">spos_</param>
 	Vector2 ApplyPosition(const Vector2& pos);
 
+	void SetPosition(Vector2 pos);
+
 protected:
 
 	//座標系
 	Vector2 size_{};			//物体の大きさ
-	Vector2 pos_{};				//ワールド座標系のプレイヤーの中心
+	Vector2 position_{};				//ワールド座標系のプレイヤーの中心
 	Vector2 scale_{};			//プレイヤーの大きさの倍率
 	float theta_{};				//回転角度(radian)
 

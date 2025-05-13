@@ -1,4 +1,5 @@
 #pragma once
+#include<Novice.h>
 #include"Scene.h"
 
 class GameClear : public Scene

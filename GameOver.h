@@ -1,5 +1,7 @@
-#pragma once
-#include"Scene.h"
+#pragma once  
+#include <Novice.h>  
+  
+#include "Scene.h"  
 
 class GameOver : public Scene
 {
@@ -9,4 +11,8 @@ public:
 
 	Scene* Update() override;
 	void Draw() override;
+
+private:
+
+	/*Title* title_;*/
 };
